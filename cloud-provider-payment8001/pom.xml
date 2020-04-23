@@ -12,6 +12,14 @@
     <artifactId>cloud-provider-payment8001</artifactId>
 
     <dependencies>
+
+        <!-- 引入自定义的api通用包 -->
+        <dependency>
+            <groupId>com.gen.springcloud</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <!-- web和actuator，通常都会一起导入 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

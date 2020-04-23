@@ -12,6 +12,7 @@
   <modules>
     <module>cloud-provider-payment8001</module>
     <module>cloud-consumer-order80</module>
+    <module>cloud-api-commons</module>
   </modules>
 
   <!-- 统一管理jar包版本 -->
@@ -105,8 +106,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.0</version>
         <configuration>
-          <source>${java.version}</source>
-          <target>${java.version}</target>
+          <source>1.8</source>
+          <target>1.8</target>
           <encoding>${project.build.sourceEncoding}</encoding>
           <annotationProcessorPaths>
             <path>
