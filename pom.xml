@@ -122,8 +122,6 @@
         </configuration>
       </plugin>
 
-<!--     test github -->
-
     </plugins>
   </build>
 
