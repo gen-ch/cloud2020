@@ -15,7 +15,7 @@
     <module>cloud-api-commons</module>
     <module>cloud-eureka-server7001</module>
     <module>cloud-eureka-server7002</module>
-      <module>cloud-provider-payment8002</module>
+    <module>cloud-provider-payment8002</module>
   </modules>
 
   <!-- 统一管理jar包版本 -->
@@ -31,7 +31,7 @@
     <mybatis.spring.boot.version>2.1.0</mybatis.spring.boot.version>
   </properties>
 
-  <!-- 子模块继承之后，提供作用：锁定版本+子modlue不用写groupId和version  -->
+  <!-- 子模块继承之后，提供作用：锁定版本+子module不用写groupId和version  -->
   <dependencyManagement>
     <dependencies>
       <!--spring boot 2.2.2-->
