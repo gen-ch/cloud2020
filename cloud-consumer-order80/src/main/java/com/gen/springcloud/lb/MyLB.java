@@ -11,7 +11,7 @@ public class MyLB implements LoadBalancer {
 
     private AtomicInteger atomicInteger = new AtomicInteger(0);
 
-    public final int getAndIncrement() {
+    private int getAndIncrement() {
         int current;
         int next;
 
