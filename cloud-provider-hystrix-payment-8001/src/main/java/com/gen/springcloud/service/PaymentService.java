@@ -47,16 +47,15 @@ public class PaymentService {
             @HystrixProperty(name = "circuitBreaker.sleepWindowInMilliseconds", value = "10000"), // 时间窗口期
             @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "60"),// 失败率达到多少后跳闸
     })
-    public String paymentCircuitBreaker(@PathVariable("id") Integer id) {
+    public String paymentCircuitBreaker(Integer id) {
         if (id < 0) {
             throw new RuntimeException("******id 不能负数");
         }
         String serialNumber = IdUtil.simpleUUID(); //类似于 UUID.randomUUID().toString()
-
         return Thread.currentThread().getName() + "\t" + "调用成功，流水号: " + serialNumber;
     }
 
-    public String paymentCircuitBreaker_fallback(@PathVariable("id") Integer id) {
+    public String paymentCircuitBreaker_fallback(Integer id) {
         return "id 不能负数，请稍后再试，/(ㄒoㄒ)/~~   id: " + id;
     }
 
